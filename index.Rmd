@@ -21,7 +21,7 @@ options(htmltools.dir.version = FALSE)
 library(icon)
 library(tidyverse)
 library(palmerpenguins)
-
+library(DT)
 ```
 
 class: inverse, center, middle
@@ -168,14 +168,31 @@ class: inverse, middle
 # Example Data
 
 ```{r table, echo = FALSE}
-library(DT)
+
 penguins %>% 
   select(species, culmen_length_mm, culmen_depth_mm, flipper_length_mm, body_mass_g) %>% 
   drop_na() %>% 
-  datatable(options = list(
-    autoWidth = TRUE
-  ))
+  kableExtra::kable(digits = 3) %>% 
+  kableExtra::kable_styling(bootstrap_options = "striped", full_width = F) %>% 
+  kableExtra::scroll_box(width = "800px", height = "500px")
 ```
+
+
+---
+.left-code[
+```{r plot1, fig.show="hide", fig.retina = 3, warning=FALSE}
+
+penguins %>% 
+  ggplot(aes(x = culmen_length_mm, y = culmen_depth_mm, color = species, group = species)) +
+  geom_point(aes(shape = species),
+             size = 3, alpha = 0.8) +
+  theme_minimal()
+```
+]
+
+.right-plot[
+![](`r knitr::fig_chunk("plot1", "png")`)
+]
 
 
 ---
@@ -203,4 +220,8 @@ penguins %>%
 
 .right-plot[
 ![](`r knitr::fig_chunk("plot2", "png")`)
+]
+
+.footnote[codes from [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/examples.html)
+
 ]
