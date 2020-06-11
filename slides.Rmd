@@ -1,0 +1,206 @@
+---
+title: "博班必備自學力"
+subtitle: "開源軟體R帶我看到的世界"
+author: "陳思樺"
+institute: ""
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts", "custom.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    
+      
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(icon)
+library(tidyverse)
+library(palmerpenguins)
+
+```
+
+class: inverse, center, middle
+
+# Find me at...
+
+
+`r icon::fontawesome("paper-plane", style = "solid")`  teresa.sh.chen@gmail.com  
+`r icon::fontawesome$brands$twitter` ptteresachen 
+`r icon::fontawesome$brands$github` @teresashchen
+
+
+---
+
+
+background-image: url(https://media.giphy.com/media/XDYIuWmMqeEKmqEfEp/giphy.gif)
+background-position: 50% 80%
+background-size: 50%
+class: center, inverse
+
+# Get Started
+
+---
+
+background-image: url(https://www.arcgis.com/sharing/rest/content/items/83c6a3fc74464f7ea1aeb279ca2c9691/resources/1576110869922.jpeg?w=2630)
+background-position: 50% 95%
+background-size: 40%
+
+# B95 | R99 | Work | 6000-miles Journey
+
+.pull-left[
+![](ntupt_logo.jpg)
+]
+
+.pull-right[
+![](nstc_logo.jpg)
+]
+
+.footnote[[link to CV](https://teresashchen.github.io/blog/cv.html)
+]
+
+---
+
+background-image: url(https://tedideas.files.wordpress.com/2018/12/featured_art_DuncanDavidsonTED.jpg)
+background-position: 50% 80%
+background-size: cover
+class: middle, inverse
+
+# About the topic
+
+--
+### What have I learned in the past 4 years?  
+ 
+--
+### What do you want to hear from me?  
+  
+--
+### What are things that I wish to facilitate in this talk?  
+ 
+---
+name: objectives
+class: inverse, middle, center
+
+# R/Rstudio is awesome in many ways.
+
+--
+### It's an open source.  
+
+--
+### It helps you to explore data and generate plots.  
+
+--
+### It has many add-on capabilities, i.e. building website.  
+
+--
+### It provides a supported community. 
+
+--
+### It plays an important role in moving RESEARCH forward.
+
+
+---
+background-image: url(https://www.kynetics.com/docs/2018/images/open-source-heading.jpg)
+background-size: contain
+
+class: top, right
+# It's an open source.
+
+---
+.left-column[ ### Software ]
+.right-column[![](https://d33wubrfki0l68.cloudfront.net/0b4d0569b2ddf6147da90b110fbb2a17653c8b08/f06f3/images/shutterstock/r_vs_rstudio_1.png)]
+
+---
+.left-column[ 
+### Software
+### Package]
+
+.right-column[![](https://www.primemarketingexperts.com/wp-content/uploads/2019/02/Mobile-Application.png)]
+
+---
+.left-column[ 
+### Software
+### Package
+### Books]
+
+.right-column[
+
+```{r out.width = '30%', echo=FALSE}
+# url
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/19dafd10a53785f1407566a1f3a09b29a6bab847/1e5f0/images/logos/book_cover.png")
+
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/b88ef926a004b0fce72b2526b0b5c4413666a4cb/24a30/cover.png")
+
+knitr::include_graphics("https://rc2e.com/images_v2/book_cover.jpg")
+
+knitr::include_graphics("https://images-na.ssl-images-amazon.com/images/I/5115ilJfAwL._SX379_BO1,204,203,200_.jpg")
+
+knitr::include_graphics("https://bookdown.org/yihui/bookdown/images/cover.jpg")
+
+knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/cover.png")
+
+```
+]
+
+---
+
+.left-column[ 
+### Software
+### Package
+### Books
+### Shared Resources]
+
+.right-column[![](repository.PNG)]
+
+.footnote[
+[Allison's Github](https://github.com/apreshill)
+]
+---
+class: inverse, middle
+# It helps you to explore data and generate plots.  
+
+---
+
+# Example Data
+
+```{r table, echo = FALSE}
+library(DT)
+penguins %>% 
+  select(species, culmen_length_mm, culmen_depth_mm, flipper_length_mm, body_mass_g) %>% 
+  drop_na() %>% 
+  datatable(options = list(
+    autoWidth = TRUE
+  ))
+```
+
+
+---
+.left-code[
+```{r plot2, fig.show="hide", fig.retina = 3, warning=FALSE}
+
+penguins %>% 
+  ggplot(aes(x = culmen_length_mm, y = culmen_depth_mm, color = species, group = species)) +
+  geom_point(aes(shape = species),
+             size = 3, alpha = 0.8) +
+  geom_smooth(se = FALSE, method = "lm") +
+  theme_minimal() +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Penguin culmen dimensions",
+       subtitle = "Culmen length and depth for different penguins",
+       x = "Culmen length (mm)",
+       y = "Culmen depth (mm)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.85, 0.15),
+        legend.background = element_rect(fill = "white", color = NA),
+        plot.caption = element_text(hjust = 0, face= "italic"))
+```
+]
+
+.right-plot[
+![](`r knitr::fig_chunk("plot2", "png")`)
+]
