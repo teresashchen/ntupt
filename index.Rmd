@@ -97,17 +97,17 @@ class: inverse, middle, center
 ### It has many add-on capabilities, i.e. building website.  
 
 --
-### It provides a supported community. 
+### Its supporting communities are excellent and inclusive. 
 
 --
 ### It plays an important role in moving RESEARCH forward.
 
 
 ---
-background-image: url(https://www.kynetics.com/docs/2018/images/open-source-heading.jpg)
-background-size: contain
+background-image: url(https://www.3playmedia.com/wp-content/uploads/blackboard-collaborate-blog-header-1400x900.jpg)
+background-size: cover
 
-class: top, right
+class: bottom, inverse, right
 # It's an open source.
 
 ---
@@ -151,7 +151,7 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/cover.png")
 ### Software
 ### Package
 ### Books
-### Online learning]
+### Online Learning]
 
 .right-column[![](datacamp.PNG)]
 ---
@@ -160,7 +160,7 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/cover.png")
 ### Software
 ### Package
 ### Books
-### Online learning
+### Online Learning
 ### Shared Resources]
 
 .right-column[![](repository.PNG)]
@@ -169,7 +169,11 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/cover.png")
 [Allison's Github](https://github.com/apreshill)
 ]
 ---
-class: inverse, middle, right
+class: inverse, bottom, right
+
+background-image: url(https://altis.com.au/wp-content/uploads/2018/11/data_viz-1024x680.jpeg)
+background-size: cover
+
 # It helps you to </br>explore data & generate plots.  
 
 --
@@ -242,7 +246,7 @@ penguins %>%
 ---
 class: middle, center
 
-# This is how I used R/Rstudio for myself
+# This is how I used R for my research.
 
 ## [example 1](file:///C:/Users/teres/OneDrive%20-%20University%20Of%20Oregon/Backup/_Teresa%20Chen/1_Dissertation/2_Analysis/2_WALK/walk_git/walk_tidy_stats.html)
 
@@ -250,24 +254,90 @@ class: middle, center
 
 ## [example 3](https://teresashchen.github.io/blog/)
 
+
+
 ---
-class: inverse, middle, right
+class: inverse, bottom, right
+
+background-image: url(https://www.westcountrycheese.co.uk/images/promo/1/Home_Banners-Cheese_and_Pork_Pie_Cakes-0784.jpg)
+background-size: cover
 
 # It has many add-on capabilities, </br> i.e. building website, creating CV. 
 
 ---
 class: middle, center
 
-# This is how I used R/Rstudio for others
+# Here are some examples:
 
 ## [CV](file:///C:/Users/teres/OneDrive%20-%20University%20Of%20Oregon/9_Sideproject/wang_cv/cv2.html)
 
 ## [website](https://ptpeiyuyang.netlify.app/)
 
+--
+## And this slides too!
 ---
 
 class: inverse, bottom, center
 background-image: url(https://media.giphy.com/media/3oxHQjBRCjvvlHmUHm/giphy.gif)
 background-size: 50%
 
-# Don't be overwhelmed!
+# Don't feel overwhelmed!
+
+---
+class: inverse, bottom, right
+
+background-image: url(https://www.cscce.org/wp-content/uploads/2019/08/Go-CEFP-1024x768.jpg)
+background-size: cover
+
+# Its supporting communities are </br> excellent and inclusive. 
+
+---
+.pull-left[![](support1.PNG)]
+--
+.pull-right[![](support2.PNG)]
+
+
+---
+# Network of the R Communities
+
+![](https://reshamas.github.io/assets/images/r_community_map.png)
+
+---
+class: inverse, bottom, right
+
+background-image: url(https://miro.medium.com/max/3200/1*1B15QlNrMbLUDqu-90svuw.jpeg)
+background-size: cover
+
+# It plays an important role in </br> moving RESEARCH forward.
+
+---
+
+![](https://drfeinberg.github.io/PNB-Open-Science-Summer-Workshop/img/open_science_venn.jpg)
+
+---
+
+# R is beyond a tool.
+
+--
+
+.left-code[
+
+## Black Lives Matter 
+
+## Ronald Fisher (1890-1962)
+
+## **Iris** dataset 
+
+## Should we use it?
+]
+
+
+--
+.right-plot[
+
+```{r out.width = '70%', echo=FALSE}
+# local
+knitr::include_graphics("garrick.PNG")
+```
+]
+
