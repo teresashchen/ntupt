@@ -341,3 +341,27 @@ knitr::include_graphics("garrick.PNG")
 ```
 ]
 
+---
+
+class: inverse, middle, center
+
+## Open Sources  
+
+--
+## Research Tools  
+
+--
+## Add-on Functions  
+
+--
+## Supporting Communities  
+
+--
+## Social Responsibility
+
+--
+
+<img src="https://www.pngkey.com/png/full/957-9572614_please-ask-us-any-questions-you-may-have.png" width="200">
+
+
+
