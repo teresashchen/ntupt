@@ -85,7 +85,7 @@ class: middle, inverse
 name: objectives
 class: inverse, middle, center
 
-# R/Rstudio is awesome in many ways.
+# R/Rstudio is awesome in many different ways.
 
 --
 ### It's an open source.  
@@ -274,7 +274,7 @@ class: middle, center
 ## [website](https://ptpeiyuyang.netlify.app/)
 
 --
-## And this slides too!
+## And these slides too!
 ---
 
 class: inverse, bottom, center
@@ -298,7 +298,7 @@ background-size: cover
 
 
 ---
-# Network of the R Communities
+# Network of the R Community
 
 ![](https://reshamas.github.io/assets/images/r_community_map.png)
 
@@ -316,7 +316,7 @@ background-size: cover
 
 ---
 
-# R is beyond a tool.
+# R is more than just a tool.
 
 --
 
